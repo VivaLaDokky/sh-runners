@@ -33,4 +33,6 @@ WORKDIR /azp
 COPY azure-pipelines-agent/start.sh .
 RUN chmod +x start.sh
 
+USER runner
+
 ENTRYPOINT [ "./start.sh" ]
