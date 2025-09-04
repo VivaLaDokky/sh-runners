@@ -28,10 +28,8 @@ RUN pwsh -command "Install-Module -Name Az -Scope AllUsers -Repository PSGallery
 
 RUN rm -rf /var/lib/apt/lists/*
 
-
-WORKDIR /azp
-
 COPY azure-pipelines-agent/start.sh .
 RUN chmod +x start.sh
+
 
 ENTRYPOINT [ "./start.sh" ]
