@@ -28,4 +28,4 @@ RUN chmod +x start.sh
 # All subsequent commands run under this user
 USER agentuser
  
-ENTRYPOINT [ "./azure-pipelines-agent/start.sh", "--once" ]
+ENTRYPOINT [ "./start.sh", "--once" ]
